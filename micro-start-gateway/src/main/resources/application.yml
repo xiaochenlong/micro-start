@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+
+spring:
+  application:
+    name: start-gateway
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instance-id: gateway-service-id
+        serviceName: micro-${spring.application.name}
+    gateway:
+      httpserver:
+        wiretap: true
+      httpclient:
+        wiretap: true
