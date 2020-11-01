@@ -53,5 +53,6 @@
         <module>micro-start-app</module>
         <module>micro-start-gateway</module>
         <module>micro-start-mgmt</module>
+        <module>micro-start-dict</module>
     </modules>
 </project>

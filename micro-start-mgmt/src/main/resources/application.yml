@@ -21,5 +21,4 @@ spring:
       host: localhost
       port: 8500
       discovery:
-        instance-id: mgmt-service-id
-        serviceName: micro-${spring.application.name}
+        service-name: micro-${spring.application.name}

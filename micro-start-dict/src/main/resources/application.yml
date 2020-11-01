@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 9003
 
 management:
   endpoint:
@@ -15,7 +15,7 @@ management:
 
 spring:
   application:
-    name: start-app
+    name: start-dict
   cloud:
     consul:
       host: localhost
