@@ -40,6 +40,12 @@
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>vip.corejava</groupId>
+            <artifactId>micro-start-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
