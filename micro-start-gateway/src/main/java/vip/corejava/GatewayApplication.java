@@ -16,19 +16,19 @@ public class GatewayApplication {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("path_route", r -> r.path("/get")
-                        .filters(f -> f.addRequestHeader("Hello", "World"))
-                        .uri("http://httpbin.org"))
+                .route("path_route",
+                        r -> r.path("/get")
+                                .filters(f -> f.addRequestHeader("Hello", "World"))
+                                .uri("http://httpbin.org"))
 
-                .route("routh_app", r -> r
-                        .path("/app/**")
+                .route("routh_app", r -> r.path("/app/**")
                         .filters(f -> f.rewritePath("/app/(?<segment>.*)", "/${segment}"))
                         .uri("lb://micro-start-app"))
 
-                .route("routh_mgmt", r -> r
-                        .path("/mgmt/**")
-                        .filters(f -> f.rewritePath("/mgmt/(?<segment>.*)", "/${segment}"))
-                        .uri("lb://micro-start-mgmt"))
+                .route("routh_mgmt",
+                        r -> r.path("/mgmt/**")
+                                .filters(f -> f.rewritePath("/mgmt/(?<segment>.*)", "/${segment}"))
+                                .uri("lb://micro-start-mgmt"))
 
                 .build();
     }
