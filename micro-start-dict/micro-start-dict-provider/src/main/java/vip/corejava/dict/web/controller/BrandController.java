@@ -1,7 +1,7 @@
-package vip.corejava.web.controller;
+package vip.corejava.dict.web.controller;
 
 import org.springframework.web.bind.annotation.RestController;
-import vip.corejava.client.dict.BrandClient;
+import vip.corejava.dict.client.BrandClient;
 
 import java.util.Arrays;
 import java.util.List;

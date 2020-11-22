@@ -1,5 +1,4 @@
-package vip.corejava.client.dict;
-
+package vip.corejava.dict.client;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

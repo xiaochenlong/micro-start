@@ -3,16 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>micro-start</artifactId>
+        <artifactId>micro-start-dict</artifactId>
         <groupId>vip.corejava</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <artifactId>micro-start-dict</artifactId>
 
-    <modules>
-        <module>micro-start-dict-provider</module>
-        <module>micro-start-dict-client</module>
-    </modules>
+    <artifactId>micro-start-dict-client</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+    </dependencies>
 </project>
