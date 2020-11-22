@@ -1,12 +1,17 @@
 package vip.corejava.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import vip.corejava.client.dict.BrandClient;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author xcl
@@ -22,6 +27,17 @@ public class IndexController {
 
     @Autowired
     private BrandClient brandClient;
+
+
+    @Autowired
+    private DiscoveryClient discoveryClient;
+
+    @RequestMapping("/dc")
+    public Object discoveryClient() {
+        List<String> services = discoveryClient.getServices();
+        Map<String, List<ServiceInstance>> data = services.stream().collect(Collectors.toMap(s -> s, s -> discoveryClient.getInstances(s)));
+        return data;
+    }
 
     @RequestMapping("/")
     public String index() {
