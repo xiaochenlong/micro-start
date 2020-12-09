@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = {"vip.corejava.client.dict"})
+@EnableFeignClients(basePackages = {"vip.corejava.dict.client"})
 public class DamoApplication {
 
     @LoadBalanced
