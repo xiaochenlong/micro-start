@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import vip.corejava.client.dict.BrandClient;
+import vip.corejava.dict.client.BrandClient;
 
 import java.time.LocalDateTime;
 import java.util.List;

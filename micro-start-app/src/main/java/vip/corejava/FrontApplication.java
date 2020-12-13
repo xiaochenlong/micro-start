@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = {"vip.corejava.dict.client"})
-public class DamoApplication {
+public class FrontApplication {
 
     @LoadBalanced
     @Bean
@@ -24,6 +24,6 @@ public class DamoApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(DamoApplication.class, args);
+        SpringApplication.run(FrontApplication.class, args);
     }
 }

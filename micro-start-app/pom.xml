@@ -26,8 +26,8 @@
 
         <dependency>
             <groupId>vip.corejava</groupId>
-            <artifactId>micro-start-client</artifactId>
-            <version>${project.version}</version>
+            <artifactId>micro-start-dict-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

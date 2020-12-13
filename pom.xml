@@ -88,7 +88,8 @@
         <module>micro-start-gateway</module>
         <module>micro-start-mgmt</module>
         <module>micro-start-dict</module>
-        <module>micro-start-client</module>
-        <module>micro-start-auth</module>
+        <module>micro-start-common</module>
+
+
     </modules>
 </project>

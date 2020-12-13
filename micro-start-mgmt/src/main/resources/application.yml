@@ -22,3 +22,37 @@ spring:
       port: 8500
       discovery:
         service-name: micro-${spring.application.name}
+        instance-id: ${spring.application.name}-${server.port}-${spring.cloud.client.hostname}
+    stream:
+      binders:
+        rabbit_cluster:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                address: 127.0.0.1:5672
+                password: guest
+                username: guest
+                virtual: /
+        # 生产者
+        output_channel:
+          binder: rabbit_cluster
+          destination: output_channel
+          group: queue-3
+      # 消费者
+      bindings:
+        input_channel:
+          binder: rabbit_cluster
+          consumer:
+            concurrency: 1
+          destination: output_channel
+          group: queue-3
+      rabbit:
+        bindings:
+          input_channel:
+            consumer:
+              acknowledge-mode: MANUAL
+              durable-subscription: true
+              max-concurrency: 5
+              recovery-interval: 3000
+              requeue-reject: false

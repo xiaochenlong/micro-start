@@ -45,9 +45,13 @@
 
         <dependency>
             <groupId>vip.corejava</groupId>
-            <artifactId>micro-start-client</artifactId>
-            <version>${project.version}</version>
+            <artifactId>micro-start-dict-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
     </dependencies>
 </project>

@@ -6,13 +6,12 @@
     <contextName>${app_name}</contextName>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>INFO</level>
-        </filter>
         <encoder>
             <pattern>--> %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
+
+    <logger name="vip.corejava.dict.client.BrandClient" level="debug"/>
 
     <root level="INFO" additivity="false">
         <appender-ref ref="STDOUT"/>
